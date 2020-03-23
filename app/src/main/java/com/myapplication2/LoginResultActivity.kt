@@ -1,8 +1,8 @@
 package com.myapplication2
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_loginresult.*
 
 
@@ -14,11 +14,18 @@ class LoginResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_loginresult)
 
         if (intent.hasExtra("email")) {
-            TextView_get.text = intent.getStringExtra("email")
+            TextView_get.text = intent.getStringExtra("email") + "님 환영합니다!"
 
         } else {
-            Toast.makeText(this, "전달된 이름이 없습니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
         }
+//        if (intent.hasExtra("loginDataKey")) {
+//            val login = intent.getParcelableExtra<LoginActivity.LoginData>("loginDataKey")
+//            TextView_get.text = "${login.inputEmail}님의 비밀번호는 ${login.inputPassword}입니다."
+//        } else {
+//            Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
+//        }
 
     }
 }
+

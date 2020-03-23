@@ -3,30 +3,57 @@ package com.myapplication2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import android.os.Parcel
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import kotlinx.android.synthetic.main.activity_login.*
+
 
 class LoginActivity : AppCompatActivity() {
 //    private val id = "Chocopython"
 //    private val password = "1111"
 
+//    class LoginData(val inputEmail: String?, val inputPassword: String?): Parcelable {
+//
+//        constructor(parcel: Parcel) : this(
+//            parcel.readString(),
+//            parcel.readString()
+//        ) {
+//        }
+//
+//        override fun writeToParcel(parcel: Parcel, flags: Int) {
+//            parcel.writeString(inputEmail)
+//            parcel.writeString(inputPassword)
+//        }
+//
+//        override fun describeContents(): Int {
+//            return 0
+//        }
+//
+//        companion object CREATOR : Parcelable.Creator<LoginData> {
+//            override fun createFromParcel(parcel: Parcel): LoginData {
+//                return LoginData(parcel)
+//            }
+//
+//            override fun newArray(size: Int): Array<LoginData?> {
+//                return arrayOfNulls(size)
+//            }
+//        }
+//    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-        // 1. 값을 가져온다.
-        // 2. 클릭을 감지한다.
-        // 3. 1번의 값을 다른 액티비티로 넘긴다.(화면 이동)
+//1
         btn_login.setOnClickListener {
             val inputEmail = TextInputEditText_email.text.toString()
             val inputPassword = TextInputEditText_password.text.toString()
 
             val nextIntent = Intent(this, LoginResultActivity::class.java)
             nextIntent.putExtra("email", inputEmail)
-            nextIntent.putExtra("password", inputPassword)
             startActivity(nextIntent)
         }
-
+//2
 //        btn_login.setOnClickListener {
 //            val inputEmail = TextInputEditText_email.text?.trim().toString()
 //            val inputPassword = TextInputEditText_password.text?.trim().toString()
@@ -45,5 +72,16 @@ class LoginActivity : AppCompatActivity() {
 //                }
 //            }
 //        }
+
+//        var loginData = LoginData(TextInputEditText_email.text.toString(), TextInputEditText_password.text.toString())
+//
+//        btn_login.setOnClickListener {
+//            val nextIntent = Intent(this, LoginResultActivity::class.java)
+//            nextIntent.putExtra("loginDataKey", loginData)
+//            startActivity(nextIntent)
+//        }
+
     }
+
 }
+
