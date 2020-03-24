@@ -8,12 +8,21 @@
     android:paddingRight="20dp">
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="In the Mood"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        />
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="@null"
         android:src="@drawable/main_img"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"

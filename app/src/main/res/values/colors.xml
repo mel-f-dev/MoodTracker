@@ -3,8 +3,19 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="colorWhile">#FFFFFF</color>
+    <color name="colorWhile">#777777</color>
     <color name="colorMainGreen">#8BD9DF</color>
     <color name="colorMainPink">#E8E2F6</color>
+
+    <!-- colors for button style -->
+    <color name="gradient_start_color">#8BD9DF</color>
+    <color name="gradient_middle_color">#FFFFFF</color>
+    <color name="gradient_end_color">#E8E2F6</color>
+
+    <!-- colors for tab and screen text -->
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="intro_title_color">#000000</color>
+    <color name="intro_description_color">#656565</color>
+
 
 </resources>

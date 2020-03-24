@@ -1,9 +1,18 @@
 package com.myapplication2
 
+import android.content.Context
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.LayoutInflater
+import android.widget.GridView
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_loginresult.*
+import com.myapplication2.Adapter.CalendarAdapter
+import kotlinx.android.synthetic.main.activity_calendar.*
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashSet
 
 
 class LoginResultActivity : AppCompatActivity() {
@@ -11,10 +20,10 @@ class LoginResultActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_loginresult)
+        setContentView(R.layout.activity_calendar)
 
         if (intent.hasExtra("email")) {
-            TextView_get.text = intent.getStringExtra("email") + "님 환영합니다!"
+            email_get.text = intent.getStringExtra("email") + "님의 무드 패턴"
 
         } else {
             Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
@@ -27,5 +36,6 @@ class LoginResultActivity : AppCompatActivity() {
 //        }
 
     }
+
 }
 
