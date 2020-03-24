@@ -1,4 +1,4 @@
-package com.myapplication2.Adapter
+package com.myapplication2
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 import com.myapplication2.R
-import com.myapplication2.custom_class.ScreenItem
+import com.myapplication2.ScreenItem
 
 class IntroViewPagerAdapter(
     var mContext: Context,
