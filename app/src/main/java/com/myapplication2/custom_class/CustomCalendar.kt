@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.GridView
 import android.widget.LinearLayout
-import com.myapplication2.Adapter.CalendarAdapter
 import com.myapplication2.R
 import java.util.*
 import kotlin.collections.ArrayList

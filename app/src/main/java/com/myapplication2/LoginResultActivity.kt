@@ -1,18 +1,9 @@
 package com.myapplication2
 
-import android.content.Context
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.LayoutInflater
-import android.widget.GridView
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.myapplication2.Adapter.CalendarAdapter
-import kotlinx.android.synthetic.main.activity_calendar.*
-import java.util.*
-import kotlin.collections.ArrayList
-import kotlin.collections.HashSet
+import kotlinx.android.synthetic.main.activity_loginresult.*
 
 
 class LoginResultActivity : AppCompatActivity() {
@@ -20,7 +11,7 @@ class LoginResultActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_calendar)
+        setContentView(R.layout.activity_loginresult)
 
         if (intent.hasExtra("email")) {
             email_get.text = intent.getStringExtra("email") + "님의 무드 패턴"
