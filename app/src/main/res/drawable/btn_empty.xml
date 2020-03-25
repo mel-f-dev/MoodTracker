@@ -12,7 +12,10 @@
         <shape
             android:shape="rectangle">
             <corners android:radius="100dp"/>
-            <solid android:color="#F3F3FF"/>
+            <solid android:color="#00ff0000"/>
+            <stroke
+                android:color="#000000"
+                android:width="0.1dp"/>
 
         </shape>
     </item>
