@@ -13,6 +13,9 @@ class LoginResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loginresult)
 
+        Toast.makeText(this, "어서오세요:)", Toast.LENGTH_SHORT).show()
+
+
         if (intent.hasExtra("email")) {
             email_get.text = intent.getStringExtra("email") + "님의 무드 패턴"
 
