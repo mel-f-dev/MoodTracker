@@ -23,4 +23,9 @@
         <item name="colorControlActivated">#6200EE</item>
     </style>
 
+    <!--popup layout-->
+    <style name="MyPopup" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/popup_background</item>
+    </style>
+
 </resources>
