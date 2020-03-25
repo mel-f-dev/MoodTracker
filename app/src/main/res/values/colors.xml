@@ -9,7 +9,7 @@
 
     <!-- colors for button style -->
     <color name="gradient_start_color">#8BD9DF</color>
-    <color name="gradient_middle_color">#FFFFFF</color>
+    <color name="gradient_center_color">#FFFFFF</color>
     <color name="gradient_end_color">#E8E2F6</color>
 
     <!-- colors for tab and screen text -->

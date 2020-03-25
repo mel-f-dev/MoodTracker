@@ -1,9 +1,14 @@
 package com.myapplication2
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
@@ -16,8 +21,11 @@ class IntroActivity : AppCompatActivity() {
     var introViewPagerAdapter: IntroViewPagerAdapter? = null
     var tabIndicator: TabLayout? = null
     var btnNext: Button? = null
+    var btnGetStarted: Button? = null
 
     var position: Int = 0
+
+    lateinit var btnAnim: Animation
 
     public override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -29,6 +37,16 @@ class IntroActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN
             )
 
+            //check if it's opened before or not
+            if (restorePrefData()) {
+                var intent =  Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+
+
+
             setContentView(R.layout.activity_intro)
 
             //hide the action bar
@@ -37,6 +55,8 @@ class IntroActivity : AppCompatActivity() {
             //ini views
             btnNext = findViewById(R.id.btn_next)
             tabIndicator = findViewById(R.id.tab_indicator)
+            btnGetStarted = findViewById((R.id.btn_getstarted))
+            btnAnim = AnimationUtils.loadAnimation(applicationContext, R.anim.button_animation)
 
             //fill list screen
             var mList: MutableList<ScreenItem> = ArrayList()
@@ -83,8 +103,67 @@ class IntroActivity : AppCompatActivity() {
                     position ++
                     screenPager!!.setCurrentItem(position)
                 }
+                if (position == mList.size-1) {  //when we reach to the last screen
+                    //Todo: show the GETSTARTED Button and hide indicator and the next button
+                    loadLastScreen()
+
+                }
             })
 
+            //tablayout add change listener
+            tabIndicator?.addOnTabSelectedListener(object : TabLayout.BaseOnTabSelectedListener<TabLayout.Tab>{
+                override fun onTabReselected(tab: TabLayout.Tab?) {
 
+                }
+
+                override fun onTabUnselected(tab: TabLayout.Tab?) {
+
+                }
+
+                override fun onTabSelected(tab: TabLayout.Tab?) {
+                    if (tab!!.position == mList.size -1) {
+                        loadLastScreen()
+                    }
+                }
+
+            })
+
+            // Get started button click listener
+            btnGetStarted?.setOnClickListener{
+                //open main activity
+                var loginIntent = Intent(this, LoginActivity::class.java)
+                startActivity(loginIntent)
+
+                //check if user already have seen the Intro Screen
+                //Todo: save a boolean value to storage using shared preferences to the process
+                savePrefData()
+                finish()
+
+            }
+
+
+    }
+
+    private fun restorePrefData(): Boolean {
+        var pref:SharedPreferences = applicationContext.getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
+        var isIntroActivityOpenedBefore:Boolean = pref.getBoolean("isIntroOpened", false)
+        return isIntroActivityOpenedBefore
+
+    }
+
+    private fun savePrefData() {
+        var pref: SharedPreferences = applicationContext.getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
+        var editor: SharedPreferences.Editor = pref.edit()
+        editor.putBoolean("isIntroOpened", true)
+        editor.commit()
+    }
+
+    //show the GETSTARTED Button and hide indicator and the next button
+    private fun loadLastScreen() {
+        btnNext?.setVisibility(View.INVISIBLE)
+        btnGetStarted?.setVisibility(View.VISIBLE)
+        tabIndicator?.setVisibility(View.INVISIBLE)
+        //Todo: ADD an animation the getstarted button
+        btnGetStarted?.setAnimation(btnAnim)
     }
 }
