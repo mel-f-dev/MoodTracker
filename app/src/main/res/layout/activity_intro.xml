@@ -24,10 +24,9 @@
     </androidx.viewpager.widget.ViewPager>
 
     <Button
-        android:textColor="@color/gradient_start_color"
-        android:drawableTint="@color/gradient_start_color"
+        android:drawableTint="#000000"
         android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/btn_empty"
         android:id="@+id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,9 +57,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="64dp"
-        android:background="@drawable/btn_gradient_style"
+        android:background="@drawable/btn_empty"
         android:text="start"
-        android:textColor="@color/colorMainGreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

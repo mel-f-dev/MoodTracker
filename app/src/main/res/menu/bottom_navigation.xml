@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="#666666">
+
+    <item
+        android:id="@+id/mood"
+        android:icon="@drawable/ic_palette"
+        android:title="mood"
+        app:cnb_iconColor="@color/navigation_color_moodtracker"/>
+
+    <item
+        android:id="@+id/habbit_tracker"
+        android:icon="@drawable/ic_check"
+        android:title="habbit"
+        app:cnb_iconColor="@color/navigation_color_habbittracker"/>
+
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/ic_add"
+        android:title="add"
+        app:cnb_iconColor="@color/navigation_color_add"/>
+
+    <item
+        android:id="@+id/chart"
+        android:icon="@drawable/ic_chart"
+        android:title="chart"
+        app:cnb_iconColor="@color/navigation_color_chart"/>
+
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_account"
+        android:title="profile"
+        app:cnb_iconColor="@color/navigation_color_profile"/>
+
+</menu>

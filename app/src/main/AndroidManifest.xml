@@ -28,9 +28,15 @@
         <activity
             android:name=".LoginResultActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".PopUpActivity" android:theme="@style/MyPopup">
-
+        <activity
+            android:name=".PopUpActivity"
+            android:theme="@style/MyPopup"
+            android:launchMode="singleInstance"
+            android:screenOrientation="fullSensor">
         </activity>
+
+        <receiver android:name=".PushReceiver"/>
     </application>
+
 
 </manifest>
