@@ -13,7 +13,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_intro.*
+import com.myapplication2.Adapter.IntroViewPagerAdapter
 import java.util.ArrayList
 
 class IntroActivity : AppCompatActivity() {

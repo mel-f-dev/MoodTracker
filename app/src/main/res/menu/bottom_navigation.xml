@@ -10,10 +10,10 @@
         app:cnb_iconColor="@color/navigation_color_moodtracker"/>
 
     <item
-        android:id="@+id/habbit_tracker"
+        android:id="@+id/habit_tracker"
         android:icon="@drawable/ic_check"
-        android:title="habbit"
-        app:cnb_iconColor="@color/navigation_color_habbittracker"/>
+        android:title="habit"
+        app:cnb_iconColor="@color/navigation_color_habittracker"/>
 
     <item
         android:id="@+id/add"
