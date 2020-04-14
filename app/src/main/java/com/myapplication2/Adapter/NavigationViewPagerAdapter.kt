@@ -49,7 +49,7 @@ class NavigationViewPagerAdapter (supportFragmentManager: FragmentManager): Frag
             savedInstanceState: Bundle?
         ): View? {
             var rootView = LayoutInflater.from(context).inflate(R.layout.fragment_mood, null, false)
-            rootView.text_mood.text = param1
+            rootView.email_get.text = param1
             return rootView
         }
     }

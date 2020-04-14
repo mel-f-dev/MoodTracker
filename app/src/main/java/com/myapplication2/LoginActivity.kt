@@ -7,6 +7,7 @@ import android.preference.PreferenceManager
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
+import com.myapplication2.Fragment.MoodFragment
 import kotlinx.android.synthetic.main.activity_login.*
 
 

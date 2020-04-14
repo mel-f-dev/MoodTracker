@@ -35,7 +35,7 @@
             android:screenOrientation="fullSensor">
         </activity>
 
-        <receiver android:name=".PushReceiver"/>
+
     </application>
 
 
