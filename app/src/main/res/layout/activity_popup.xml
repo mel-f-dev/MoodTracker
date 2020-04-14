@@ -38,9 +38,9 @@
                 android:gravity="center"
                 android:layout_weight="1">
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/login_face"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/touch_test1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -54,9 +54,9 @@
                 android:gravity="center"
                 android:layout_weight="1">
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/login_face"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/touch_test2"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -70,9 +70,9 @@
                 android:gravity="center"
                 android:layout_weight="1">
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/login_face"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/touch_test3"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -86,9 +86,9 @@
                 android:gravity="center"
                 android:layout_weight="1">
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/login_face"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/touch_test4"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -102,9 +102,9 @@
                 android:gravity="center"
                 android:layout_weight="1">
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/login_face"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/touch_test1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -118,9 +118,9 @@
                 android:gravity="center"
                 android:layout_weight="1">
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/login_face"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/touch_test3"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

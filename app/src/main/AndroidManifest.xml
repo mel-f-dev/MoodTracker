@@ -28,11 +28,11 @@
         <activity
             android:name=".LoginResultActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".PopUpActivity"
-            android:theme="@style/MyPopup"
+
+        <activity android:name=".PopupActivity"
             android:launchMode="singleInstance"
-            android:screenOrientation="fullSensor">
+            android:screenOrientation="fullSensor"
+            android:theme="@android:style/Theme.Translucent">
         </activity>
 
 
