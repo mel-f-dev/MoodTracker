@@ -1,5 +1,6 @@
 package com.myapplication2
 
+import android.content.Intent
 import android.graphics.Insets.add
 import android.os.Bundle
 import android.view.MenuItem
@@ -25,10 +26,14 @@ class LoginResultActivity : AppCompatActivity() {
     private var fragmentChart: ChartFragment = ChartFragment()
     private var fragmentProfile: ProfileFragment = ProfileFragment()
 
+    //popup 호출시(푸시 리시버에서 호출)
+    var intentPopup: Intent = Intent(this, PopupActivity::class.java)
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loginresult)
+
 
         //로그인 알림
         Toast.makeText(this, "안녕!", Toast.LENGTH_SHORT).show()
@@ -68,6 +73,9 @@ class LoginResultActivity : AppCompatActivity() {
                 view_pg
             )
         )
+        //호출시(푸시 리시버에서 호출)
+        intentPopup.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        this.startActivity(intentPopup)
     }
 
     private fun getColors():IntArray{
