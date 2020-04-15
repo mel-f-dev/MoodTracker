@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.myapplication2.R
+import kotlinx.android.synthetic.main.activity_login.view.*
 import kotlinx.android.synthetic.main.fragment_mood.view.*
 
 
@@ -49,7 +50,7 @@ class NavigationViewPagerAdapter (supportFragmentManager: FragmentManager): Frag
             savedInstanceState: Bundle?
         ): View? {
             var rootView = LayoutInflater.from(context).inflate(R.layout.fragment_mood, null, false)
-            rootView.email_get.text = param1
+            rootView.text_mood.text = param1
             return rootView
         }
     }

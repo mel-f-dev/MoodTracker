@@ -27,7 +27,7 @@ class LoginResultActivity : AppCompatActivity() {
     private var fragmentProfile: ProfileFragment = ProfileFragment()
 
     //popup 호출시(푸시 리시버에서 호출)
-    var intentPopup: Intent = Intent(this, PopupActivity::class.java)
+//    var intentPopup: Intent = Intent(this, PopupActivity::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -74,8 +74,8 @@ class LoginResultActivity : AppCompatActivity() {
             )
         )
         //호출시(푸시 리시버에서 호출)
-        intentPopup.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
-        this.startActivity(intentPopup)
+//        intentPopup.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
+//        this.startActivity(intentPopup)
     }
 
     private fun getColors():IntArray{
